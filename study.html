@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h2 {
+            margin-right: 140px;
+            color: rgb(255, 128, 0);
+        }
+        .header ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .header li {
+            margin: 10px;
+            padding: 10px;
+        }
+        .header li:hover {
+            color: gray;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .search-box {
+            padding: 12px 30px 12px 30px;
+            width: 80%;
+            margin-top: 2px;
+            border: 1px solid gray;
+            background-color: black;
+        }
+        .area {
+            border: 1px solid #000;
+            margin-right: 20px;
+            padding: 10px 25px 10px 25px;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px gray;
+            background-color: gray;
+        }
+        .download {
+            margin-left: 200px;
+            background-color: rgb(107, 69, 0);
+            color: rgb(255, 128, 0);
+            padding: 7px 10px 7px 10px;
+            border-radius: 5px;
+        }
+        .popular {
+            display: flex;
+            justify-content: center;
+            background-color: red;
+        }
+        .popular p {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>제목</h2>
+        <ul>
+            <li>중고거래</li>
+            <li>부동산</li>
+            <li>중고차</li>
+            <li>알바</li>
+            <li>동네업체</li>
+            <li>동네생활</li>
+            <li>모임</li>
+        </ul>
+        <p class="download">앱 다운로드</p>
+    </div>
+
+    <div class="search">
+        <p class="area">지역</p>
+        <input type="search" class="search-box" placeholder="검색어를 입력하세요.">
+    </div>
+    <div class="popular">
+        <p class="populartext">인기 검색어</p>
+    </div>
+</body>
+</html>
