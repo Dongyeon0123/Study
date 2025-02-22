@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid #b7b7b7;
+            padding: 25px;
+            width: 48%;
+            height: 380px;
+            margin: auto;
+            margin-top: 250px;
+
+        }
+        .box h2 {
+            margin: 0px;
+        }
+        .box p {
+            margin: 7px;
+        }
+        .email {
+            padding: 8px;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 10px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+        }
+        .left {
+            width: 50%;
+            float: left;
+            margin-bottom: 10px;
+        }
+        .right {
+            margin-bottom: 10px;
+        }
+        .f-name {
+            height: 27px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+        }
+        .l-name {
+            height: 27px;
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+        }
+        .messagebox {
+            border: 1px solid #b4b4b4;
+            border-radius: 3px;
+            height: 110px;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        input[type=checkbox] {
+            color: gray;
+        }
+        .submit {
+            float: right;
+            padding: 5px;
+            padding-left: 35px;
+            padding-right: 35px;
+            border-radius: 3px;
+            background-color: #ffd900;
+            border: 1px;
+            color: white;
+            font-size: 15px;
+            margin-right: 10px;
+        }
+        .text {
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>contact us</h2>
+        <br>
+        <form>
+            <p>Your Email</p>
+            <input type="email" placeholder=" email@example.com" class="email">
+            <div class="left">
+                <p>First name</p>
+                <input type="text" class="f-name">
+            </div>
+            <div class="right">
+                <p>Last name</p>
+                <input type="text" class="l-name">
+            </div>
+            <div class="message-box">
+               <p>Message</p>
+               <input type="text" class="messagebox">
+            </div>
+            <input type="checkbox"> <span class="text">Subscribe</span>
+            <button type="submit" class="submit">SEND</button>
+        </form>
+    </div>
+</body>
+</html>

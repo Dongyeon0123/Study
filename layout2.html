@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,6 +18,22 @@
         <p>대충 내용 모아노은 것들 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p>
     </div>
 
-    <h1>hello</h1>
+    <form> <!-- action = 작성한 내용이 어느 서버 경로로 전달될 지
+                        method = 어떤 방식으로 서버에 전달될 지-->
+        <input type="text" placeholder="아이디 입력" class="text-input">
+        <input type="password" placeholder="패스워드 입력">
+
+        <input type="text" name="human">
+        <!-- name은 서버에 전달이 되므로 중요함-->
+
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+
+        <textarea rows="5"></textarea>
+        <button type="submit">전송</button>
+    </form>
 </body>
 </html>

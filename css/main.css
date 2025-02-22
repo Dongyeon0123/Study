@@ -130,3 +130,9 @@
 /* 근데 보통 웹 앱을 같이 사용하게 돼서,
 width %를 사용할 경우, pc에서는 크기가 매우 커짐
 그래서 max-width를 함께 사용하는것이 좋음 */
+
+.text-input {
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #000;
+}
