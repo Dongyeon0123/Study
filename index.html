@@ -3,8 +3,84 @@
     <head>
         <meta charset="UTF-8" />
         <title>Title</title>
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+
+        <!-- <h1 id="hello">안녕하세요</h1>
+        <h1 id="hi">JS 초보에요</h1> -->
+
+        <!-- <div class="alert-box" id="alert">
+            알림창임 <button onclick="document.getElementById('alert').style.display = 'none'">
+            닫기
+        </button>
+        </div>
+
+        <br>
+
+        아래는 함수 사용 안하고, HTML코드 내에서 JavaScript를 사용하는 모습
+        <button onclick="document.getElementById('alert').style.display = 'block'">
+            알림창 생성하기
+        </button>
+        -->
+
+        <div class="alert-box" id="alert">
+            아이디를 입력하세요. <!-- 알림창 닫는 함수 호출 <button onclick="noneAlert()">닫기</button> -->
+            <button onclick="showAlert('none')">닫기</button>
+        </div>
+
+        <div class="alert-box" id="alert1">
+            패스워드를 입력하세요.
+            <button onclick="showAlert1('none')">닫기</button>
+        </div>
+
+        <button onclick="showAlert('block')">
+            알림창 생성하기
+        </button>
+
+        <button onclick="showAlert1('block')">
+            알림창 생성하기 2
+        </button>
+
+        <script>
+            //문서의.아이디를불러와서.속성을 바꾸거나, HTML을 바꿀 수 있음
+            // 잘 이용하면 로그인 시, 로그아웃 버튼, 로그아웃 시 로그인 버튼으로 나오도록 할 수 있을것
+
+            //document.getElementById('hello').innerHTML = '안녕이다';
+            //document.getElementById('hello').style.color = 'red';
+            //document.getElementById('hi').innerHTML = 'JS 고수에요';
+            //document.getElementById('hello').style.fontSize = '16px';
+
+            //function showAlert() {
+            //    document.getElementById('alert').style.display = block;
+            //}
+
+            function showAlert(파라미터) {
+                document.getElementById('alert').style.display = 파라미터;
+            }
+
+            function showAlert1(a) {
+                document.getElementById('alert1').style.display = a;
+            }
+
+            // 알림창 닫는 함수 --
+            //function noneAlert() {
+            //    document.getElementById('alert').style.display = 'none';
+            //}
+
+            // 파라미터를 사용하지 않으면, 알림창 열기 닫기 함수를 하나씩 만들어줘야 했는데,
+            // 파라미터를 사용했더니 함수 하나로 열고 닫는 기능을 같이 사용할 수 있는 모습
+            // 파라미터 자리에는, 파라미터라는 글자 말고도 다른 편한 작명 사용 가능
+
+            // 참고로 파라미터와 함수 기능은 필수 문법이 아님, 없어도 개발 가능.
+            // 하지만 있으면 가독성이 좋고, 편리함 증가
+
+            function plus(a, b) {
+                a + b;
+            }
+
+
+        </script>
 
     </body>
 </html>
