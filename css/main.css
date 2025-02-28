@@ -136,3 +136,93 @@ width %를 사용할 경우, pc에서는 크기가 매우 커짐
     font-size: 20px;
     border: 1px solid #000;
 }
+
+.alert-box {
+    background-color: skyblue;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+.cart-background {
+    width: 100%;
+    background-color: #c2d2de;
+    padding: 30px;
+}
+
+.shopping {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.btn {
+    padding: 15px;
+    background-color: coral;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: chocolate;
+}
+
+.btn:focus {
+    background-color: grey;
+}
+
+.btn:active {
+    background-color: brown;
+}
+/* 보통 이 순서로 사용함. hover -> focus -> active */
+/* focus는 선택 됐을 때, active는 클릭할 때 */
+
+
+.main-btn {
+    padding: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+}
+.bg-red {
+    background-color: red;
+}
+.bg-blue {
+    background-color: blue;
+}
+
+/* 뼈대 class와 살 class를 분리한 모습. */
+
+.flex-item {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    margin: 5px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+/* 부모 요소에 display: flex를 주면 가로배치를 할 수 있음 */
+/* justify-content는 정렬 방법을 말한다. 좌측정렬: flex-start / 우측정렬: flex-end */
+/* 세로 정렬은 flex-direction: column */
+/* flex-wrap: wrap <- width크면 밑으로 보내고 싶을 때 */
+
+.nav-container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    padding: 10px;
+}
+
+
+
+.nav-item {
+    margin-right: 10px;
+}

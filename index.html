@@ -25,16 +25,11 @@
         -->
 
         <div class="alert-box" id="alert">
-            아이디를 입력하세요. <!-- 알림창 닫는 함수 호출 <button onclick="noneAlert()">닫기</button> -->
-            <button onclick="showAlert('none')">닫기</button>
+            <p id="text">알림창임</p> <!-- 알림창 닫는 함수 호출 <button onclick="noneAlert()">닫기</button> -->
+            <button onclick="deleteAlert()">닫기</button>
         </div>
 
-        <div class="alert-box" id="alert1">
-            패스워드를 입력하세요.
-            <button onclick="showAlert1('none')">닫기</button>
-        </div>
-
-        <button onclick="showAlert('block')">
+        <button onclick="showAlert()">
             알림창 생성하기
         </button>
 
@@ -55,12 +50,18 @@
             //    document.getElementById('alert').style.display = block;
             //}
 
-            function showAlert(파라미터) {
-                document.getElementById('alert').style.display = 파라미터;
+            function showAlert() {
+                document.getElementById('alert').style.display = 'block';
+                document.getElementById('text').innerHTML = '아이디를 입력하세요.';
             }
 
-            function showAlert1(a) {
-                document.getElementById('alert1').style.display = a;
+            function showAlert1() {
+                document.getElementById('alert').style.display = 'block';
+                document.getElementById('text').innerHTML = '패스워드를 입력하세요.';
+            }
+
+            function deleteAlert() {
+                document.getElementById('alert').style.display = 'none';
             }
 
             // 알림창 닫는 함수 --
