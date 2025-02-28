@@ -1,39 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body style="margin: 0;"> <!-- 바디 태그에는 기본적으로 margin이 있음. -->
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
 
-    <div class="main-background">
-        <h4 class="main-title">Buy our excellent shoes!</h4>
-        <p class="shoes-content">Lorem ipsum dolor sit amet. consectetur adipisicing elit 뭐시기</p>
-        <button>Buy Now</button>
-    </div>
-    <div class="content-box">
-        <h2>대충 제목 @@@@@@@@@@@@@@@@@</h2>
-        <p>대충 내용 모아노은 것들 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p>
-    </div>
+    <body style="margin: 0">
 
-    <form> <!-- action = 작성한 내용이 어느 서버 경로로 전달될 지
+        <nav class="nav-container">
+            <div class="nav-item">Logo</div>
+            <div style="flex-grow: 1"></div>
+            <div class="nav-item">products</div>
+            <div class="nav-item">services</div>
+        </nav>
+
+        <!-- 바디 태그에는 기본적으로 margin이 있음. -->
+
+        <div class="main-background">
+            <h4 class="main-title">Buy our excellent shoes!</h4>
+            <p class="shoes-content">Lorem ipsum dolor sit amet. consectetur adipisicing elit 뭐시기</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="content-box">
+            <h2>대충 제목 @@@@@@@@@@@@@@@@@</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum vel aspernatur hic ducimus, nostrum ullam, perferendis natus eos? Quae qui voluptates in incidunt voluptate dolorum eveniet officia mollitia aperiam optio?</p>
+        </div>
+
+        <form>
+            <!-- action = 작성한 내용이 어느 서버 경로로 전달될 지
                         method = 어떤 방식으로 서버에 전달될 지-->
-        <input type="text" placeholder="아이디 입력" class="text-input">
-        <input type="password" placeholder="패스워드 입력">
+            <input type="text" placeholder="아이디 입력" class="text-input" />
+            <input type="password" placeholder="패스워드 입력" />
 
-        <input type="text" name="human">
-        <!-- name은 서버에 전달이 되므로 중요함-->
+            <input type="text" name="human" />
+            <!-- name은 서버에 전달이 되므로 중요함-->
 
-        <select>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-        </select>
+            <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
 
-        <textarea rows="5"></textarea>
-        <button type="submit">전송</button>
-    </form>
-</body>
+            <textarea rows="5"></textarea>
+            <button type="submit">전송</button>
+        </form>
+
+        <div class="flex-container">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+        </div>
+    </body>
 </html>
