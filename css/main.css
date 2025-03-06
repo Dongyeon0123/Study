@@ -226,3 +226,41 @@ width %를 사용할 경우, pc에서는 크기가 매우 커짐
 .nav-item {
     margin-right: 10px;
 }
+
+.test {
+    width: 50vw;
+    height: 100px;
+    background-color: grey;
+}
+/* vw라는 단위도 있음 (브라우저 폭에 비례) */
+/* vh는 브라우저 높이에 비례 */
+
+@media screen and (max-width: 1200px) {
+    .main-title {
+        font-size: 30px;
+    }
+    .nav-item {
+        font-size: 16px;
+    }
+
+    /* 여기에 class 몇 개를 적든 상관없음 */
+}
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    .main-title {
+        font-size: 15px;
+    }
+
+}
+
+/* max-width는 큰사이즈에서 작은사이즈 순으로 작성 */
+/* breakpoint기준 px값은 다른 사람껄 따라하는걸 권장 */
+/* 1200, 992, 768, 576 단위 많이 사용함 (1200px부터 태블릿 디자인) */
+/* breakpoint가 4개 이상 되면 복잡해짐 */

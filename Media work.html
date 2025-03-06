@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .content {
+                text-align: center;
+                display: grid;
+                justify-content: center;
+                gap: 10px; /* margin-right 대신 gap 사용 */
+                grid-template-columns: repeat(4, 1fr); /* 2열 설정 */
+            }
+            @media screen and (max-width: 1200px) {
+                .content {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            @media screen and (max-width: 576px) {
+                .content {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            @me
+            .box {
+                box-sizing: border-box;
+                padding: 10px;
+                border: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box">
+                <h2>Fast Shppping</h2>
+                <p>lorem ipsum</p>
+            </div>
+            <div class="box">
+                <h2>Good Service</h2>
+                <p>lorem ipsum</p>
+            </div>
+            <div class="box">
+                <h2>Free Cupons</h2>
+                <p>lorem ipsum</p>
+            </div>
+            <div class="box">
+                <h2>New Products</h2>
+                <p>lorem ipsum</p>
+            </div>
+        </div>
+    </body>
+</html>
