@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Title</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
             .nav-container {
                 width: 100%;
@@ -101,9 +102,72 @@
                 margin-top: 0px;
                 color: white;
             }
+            .img-container {
+                width: 80%;
+                margin: auto;
+                margin-top: 40px;
+            }
+
+            .img-text {
+                text-align: center;
+            }
+            .img-text p {
+                margin-bottom: 0;
+            }
+            .img-text h3 {
+                margin-top: 0;
+            }
+            .imgs {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .imgs img {
+                width: 100%;
+                margin: auto;
+                margin-bottom: -4px;
+            }
+            .img-box {
+                position: relative;
+            }
+            .image-text {
+                position: absolute;
+                top: 10%;
+                left: 7%;
+                color: white;
+            }
+            .footer {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 50px;
+                margin-top: 50px;
+                margin-bottom: 30px;
+            }
+            .footer i {
+                background-color: rgba(83, 83, 250, 0.97);
+                color: white;
+                border-radius: 50%;
+                padding: 20px;
+            }
+            .footer-text {
+                text-align: center;
+            }
+
+            @media screen and (max-width: 576px) {
+                .nav-container {
+                    display: grid;
+                    text-align: center;
+                    padding: 0px;
+                }
+                .image-box img {
+                    width: 170px;
+                    margin-top: 6px;
+
+                }
+            }
         </style>
     </head>
-    <body style="margin: 0">
+    <body style="margin: 0;">
         <div class="nav-container">
             <div class="nav-text">
                 <h2>Landing Page of Apps</h2>
@@ -150,6 +214,56 @@
                     <p>lorem ipsum I love coding</p>
                 </div>
             </div>
+        </div>
+        <div class="img-container">
+            <div class="img-text">
+                <p>Portfolio</p>
+                <h3>What me can DO</h3>
+            </div>
+            <div class="imgs">
+                <div class="img-box">
+                    <img src="image/portfolio-1.jpg" style="filter: brightness(50%); /* 50% 어둡게 */">
+                    <div class="image-text">
+                        <h3>Stationary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="image/portfolio-2.jpg" alt="">
+                    <div class="image-text">
+                        <h3>Stationary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="image/portfolio-3.jpg" alt="">
+                    <div class="image-text">
+                        <h3>Stationary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="image/portfolio-4.jpg" alt="">
+                    <div class="image-text">
+                        <h3>Stationary</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-icon">
+                <i class="fas fa-brands fa-google fa-2x"></i>
+            </div>
+            <div class="footer-icon">
+                <i class="fas fa-brands fa-twitter fa-2x"></i>
+            </div>
+            <div class="footer-icon">
+                <i class="fas fa-brands fa-instagram fa-2x"></i>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p><i class="fas fa-solid fa-copyright"></i>Codingapple</p>
         </div>
     </body>
 </html>
