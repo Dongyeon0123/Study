@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <button class="btn">숫자 올리기</button>
+        <script>
+            let number = 1;
+            $('.btn').on('click', function() {
+                if((number+3)%3 == 0) {
+                    console.log(number);
+                    console.log('박수');
+                }
+                else {
+                    console.log(number);
+                    console.log('통과');
+                }
+
+                number++;
+            });
+        </script>
+    </body>
+</html>
