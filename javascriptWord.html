@@ -7,10 +7,16 @@
     </head>
     <body>
        <button class="btn">숫자 올리기</button>
+       <button class="btn2">숫자 올리기 2</button>
         <script>
+            // 3의 배수면 박수, 9의 배수면 박수X2 나머지는 통과 출력
             let number = 1;
             $('.btn').on('click', function() {
-                if((number+3)%3 == 0) {
+                if((number)%9 == 0) {
+                    console.log(number);
+                    console.log('박수x2');
+                }
+                else if((number+3)%3 == 0) {
                     console.log(number);
                     console.log('박수');
                 }
@@ -21,6 +27,39 @@
 
                 number++;
             });
+
+            // 총합 120이거나, 과락 40 이상이면 합격
+            // 0 미만, 100 초과 숫자를 입력하면 console 띄움
+            function test(a, b) {
+                if(a < 0 || b < 0) {
+                    console.log('숫자를 0에서 100사이로 입력');
+                }
+                else if(a > 100 || b > 100) {
+                    console.log('숫자를 0에서 100사이로 입력');
+                }
+                else if((a + b) >= 120 && (a >= 40 && b >= 40)) {
+                    console.log('합격');
+                }
+                else {
+                    console.log('불합격');
+                }
+            }
+            test(40, 99);
+
+
+            // 끝의 자리가 3, 6, 9일때만 박수
+            let num = 1;
+            $('.btn2').on('click', function() {
+                if((num % 10) == 3 || (num % 10) == 6 || (num % 10) == 9) {
+                    console.log(num);
+                    console.log('박수');
+                }
+                else {
+                    console.log(num);
+                    console.log('통과');
+                }
+                num++;
+            })
         </script>
     </body>
 </html>

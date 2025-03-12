@@ -18,6 +18,9 @@
             opacity: 1;
         }
 
+        .bg-dark {
+            cursor: pointer;
+        }
         .black-bg {
           width : 100%;
           height : 100%;
@@ -44,6 +47,7 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
+        <span class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -168,6 +172,34 @@
         //     .classList.toggle('show');
             // toggle의 뜻은 show가 없으면 추가, 있으면 제거해달라는 뜻.
         // })
+
+
+        // 다크모드
+        // badge 홀수 번 클릭 시, Light 모드, 짝수 번 클릭 시, Dark 모드
+        let darkmode = 0;
+
+        $('.bg-dark').on('click', function() {
+            if(darkmode % 2 == 0 ) {
+                $('.bg-dark').css({
+                    'background-color': 'white',
+                    'color': 'black'
+                });
+                $('body').css({
+                    'background-color': 'black'
+                });
+            }
+            else {
+                $('.bg-dark').css({
+                    'color': 'white',
+                    'background-color': 'black'
+                });
+                $('body').css({
+                    'background-color': 'white'
+                });
+            }
+
+            darkmode++;
+        })
     </script>
 
     <!-- jquery 외부 라이브러리 설치.-->
