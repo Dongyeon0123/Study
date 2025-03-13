@@ -180,19 +180,13 @@
 
         $('.bg-dark').on('click', function() {
             if(darkmode % 2 == 0 ) {
-                $('.bg-dark').css({
-                    'background-color': 'white',
-                    'color': 'black'
-                });
+                $('.bg-dark').html('Light 🔄');
                 $('body').css({
                     'background-color': 'black'
                 });
             }
             else {
-                $('.bg-dark').css({
-                    'color': 'white',
-                    'background-color': 'black'
-                });
+                $('.bg-dark').html('Dark 🔄');
                 $('body').css({
                     'background-color': 'white'
                 });

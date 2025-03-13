@@ -60,6 +60,61 @@
                 }
                 num++;
             })
+
+            // let은 재할당 가능, const는 재할당 안됨.
+            let age = 25;
+            const place = 'Suwon';
+            age = 26;
+
+            console.log(age);
+            console.log(place);
+
+            // 예금액에 금액을 입력하면, 2년뒤 예금액을 계산해주는 코드
+            // 예금액이 5만원 이상이면 20%, 미만이면 15%임.
+            var 예금액= 60000;
+            var 미래예금액 = 0;
+
+            if(예금액 >= 50000) {
+                미래예금액 = 예금액 * 1.2 * 1.2;
+            }
+            else {
+                미래예금액 = 예금액 * 1.15 * 1.15;
+            }
+
+            console.log(미래예금액);
+
+            // 리필에 따른 마실 수 있는 커피양 계산
+            var first = 360;
+            var coffee = 0;
+
+            coffee = first;
+            coffee += first*(2/3);
+            first = first*(2/3);
+            coffee += first*(2/3);
+
+            console.log(coffee);
+        </script>
+
+        <!-- 간단한 퀴즈 UI (3번 틀리면 콘솔 띄우기) -->
+        <p>태조 이성계가 태어난 년도는?</p>
+        <input type="text" id="answer">
+        <button id="send-answer">제출</button>
+
+        <script>
+            let count = 0;
+
+          $('#send-answer').on('click', function() {
+              let answer = $('#answer').val().trim();
+              if(answer === '1335') {
+                  console.log('정답');
+              }
+              else {
+                  count++;
+                  if(count == 3){
+                      console.log('3번 틀렸습니다.');
+                  }
+              }
+          })
         </script>
     </body>
 </html>
