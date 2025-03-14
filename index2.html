@@ -71,6 +71,63 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
+    <div class="alert alert-danger">
+       <span class="alert-text">5</span>초 이내 구매 시, 사은품 증정 !
+    </div>
+
+    <script>
+        // setTimeout(function(){
+        //     console.log('안녕')
+        // }, 1000) // 1000은 1초
+
+        // 5초후에 위에 박스를 없애는 코드
+        // setTimeout(function() {
+        //     $('.alert').hide();
+        // }, 1000);
+
+        // n초마다 코드를 실행시키고 싶으면.
+        // setInterval(function() {
+        //     console.log('안녕하세요.');
+        // }, 1000);
+
+        // if var function <- javascript 문법
+        //
+        // document.querySelector()
+        // setTimeout
+        // alert() <- 이것들은 브라우저 사용법
+
+        // @@@ 브라우저 사용법도 잘 알아야함
+
+
+        // 아래는 미리 만들어둔 함수로, 웹 브라우저를 사용하는 모습.
+        function 함수() {
+            console.log('안녕');
+        }
+
+        setTimeout(함수, 1000);
+
+
+
+        // 1초마다, 알림창의 숫자를 1씩 줄이는 코드 숙제
+
+        let count = 5;
+        let 타이머 = setInterval(function() {
+            count -= 1;
+            if(count >= 0) {
+                $('.alert-text').html(count);
+            }
+            else if(count == -1) {
+                $('.alert').hide();
+            }
+
+            // 카운트가 0이면 정지
+            if(count < -1) {
+                clearInterval(타이머);
+            }
+        }, 1000);
+
+    </script>
+
     <p class="hello">안녕하세요.</p>
     <p class="hello">안녕하세요.</p>
     <p class="hello">안녕하세요.</p>
