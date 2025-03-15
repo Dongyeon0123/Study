@@ -40,6 +40,18 @@
             padding: 100px 20px;
             background-color: lightgray;
         }
+
+        .slide-container {
+            width: 300vw;
+            transition: all 1s;
+        }
+        .slide-box {
+            width: 100vw;
+            float: left;
+        }
+        .slide-box img {
+            width: 100%;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </head>
@@ -154,15 +166,24 @@
         // 전송 버튼을 눌렀을 때, <- 이벤트 리스너
         // input에 입력한 값에 아무것도 입력하지 않으면 alert를 띄움 <- 조건문
         $('form').on('submit', function(e) {
-            let id = $('.form-control').val().trim();  // 공백 제거 후 값 가져오기
+            let id = $('#id').val().trim();  // 공백 제거 후 값 가져오기
             if(id === '') {
                 alert('아이디를 입력하시오.');
                 e.preventDefault(); // 폼 전송 막기
             }
+            if(!/\S+@\S+\.ac\.kr/.test(id)) {
+                alert('이메일 형식 다시하기');
+                e.preventDefault(); // 폼 전송 막기
+            }
 
-            let password = $('#password').val();
+            let password = $('#password').val().trim();
+
             if(password.length < 6) {
                 alert('비밀번호는 6자리 이상으로 입력혀');
+                e.preventDefault();
+            }
+            if(!/[A-Z]/.test(password)) {
+                alert('대문자를 입력하시오.');
                 e.preventDefault();
             }
         });
@@ -170,6 +191,12 @@
         $('#id').on('change', function() {
             console.log('안녕');
         })
+
+        // 정규식 이메일 검증 방법
+        // /\S+@\S+\.ac.kr/.test('sksoda@kku.ac.kr')
+        // 정규식은 /(정규식)/ 이렇게 사용.
+        // \S = 문자 하나, \S+ 문자열
+        // .을 쓸때는 \.으로,
 
     </script>
 
@@ -252,6 +279,82 @@
             darkmode++;
         })
     </script>
+    <div style="overflow: hidden">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="image/car1.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="image/car2.png" alt="">
+            </div>
+            <div class="slide-box">
+                <img src="image/car3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">다음</button>
+    <button class="before">이전</button>
+
+    <script>
+
+        let 지금사진 = 1;
+        // 다음 버튼 누르면 다음 사진으로
+        //$('.next').on('click', function() {
+        //    if(지금사진 == 1) {
+        //        $('.slide-container').css({
+        //            'transform': 'translate(-100vw)'
+        //        });
+        //        지금사진++;
+        //    } else if(지금사진 == 2) {
+        //        $('.slide-container').css({
+        //            'transform': 'translate(-200vw)'
+        //        });
+        //        지금사진++;
+        //    }
+        //});
+        $('.next').on('click', function(){
+            $('.slide-container').css('transform', 'translateX(-' + 지금사진 + '00vw)');
+            지금사진 += 1;
+        });
+        $('.before').on('click', function() {
+            $('.slide-container').css('transform', 'translateX(+' + 지금사진 + '00vw)');
+            지금사진 -= 1;
+        });
+        //$('.before').on('click', function() {
+        //    if(지금사진 == 3) {
+        //        $('.slide-container').css({
+        //            'transform': 'translate(-100vw)'
+        //        });
+        //        지금사진--;
+        //    } else if(지금사진 == 2) {
+        //        $('.slide-container').css({
+        //            'transform': 'translate(0vw)'
+        //        });
+        //        지금사진--;
+        //    }
+        //});
+
+        $('.slide-1').on('click', function() {
+            $('.slide-container').css({
+                'transform': 'translate(0vw)'
+            });
+        });
+        $('.slide-2').on('click', function() {
+            $('.slide-container').css({
+                'transform': 'translate(-100vw)'
+            });
+        });
+        $('.slide-3').on('click', function() {
+            $('.slide-container').css({
+                'transform': 'translate(-200vw)'
+            });
+        });
+
+    </script>
+
 
     <!-- jquery 외부 라이브러리 설치.-->
     <!-- 모든 자바스크립트 라이브러리는 바디태그 끝나기 전 쯤에 넣는걸 권장. (페이지 로드 성능때문) -->

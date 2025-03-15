@@ -77,9 +77,36 @@
             // 하지만 있으면 가독성이 좋고, 편리함 증가
 
             function plus(a, b) {
-                a + b;
+                return a * b;
+            }
+            console.log(plus(96, 38));
+
+            // 부가세 계산기
+            function vat(a) {
+                let num = (a * 1.1).toFixed(1);
+                return parseFloat(num);
             }
 
+            console.log(vat(5555));
+
+            // Q1. 함수에 분과 초를 차례로 파라미터로 입력하면 ms단위로 바꿔서 뱉어주는 함수
+            // 1초 == 1000ms
+            function time(a, b) {
+                let second = (a * 60) + b;
+                return second * 1000;
+            }
+            console.log(time(1, 30));
+            console.log(time(2, 10));
+
+            function sale(a, b) {
+                let result = a * 0.9;
+                if(b == true) {
+                    result -= 1.5;
+                }
+                return parseFloat(result.toFixed(2));
+            }
+            console.log(sale(70, false));
+            console.log(sale(10, true));
 
         </script>
 
