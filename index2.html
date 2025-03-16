@@ -52,19 +52,36 @@
         .slide-box img {
             width: 100%;
         }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            z-index: 5;
+        }
+        .navbar-brand {
+            font-size: 30px;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">Navbar</span>
+        <span class="navbar-brand">SHOP</span>
         <span class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
+
+    <script>
+        $(window).on('scroll', function() {
+            let scroll_count = $(window).scrollTop();
+            if (scroll_count >= 15) {
+                $('.navbar-brand').css({'font-size': '20px'});
+            };
+        });
+    </script>
 
     <!-- 1. 미리 서브 메뉴를 html, css로 디자인 -->
     <!-- 2. 버튼 누르면 보여달라고 JS 짬 (Class 탈부착으로도 구현 가능) -->
@@ -82,6 +99,27 @@
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
+
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Quo fuga veritatis alias, quasi rerum dolor ad recusandae
+        doloremque, repellendus, mollitia laborum. Quas quos fuga nisi,
+        quisquam at optio exercitationem esse?
+    </div>
+    <script>
+        // div의 스크롤바 내린 양 + 눈에 보이는 div박스 높이 == div의 실제 높이
+        $('.lorem').on('scroll', function() {
+            let 스크롤양 = $('.lorem').scrollTop();
+            let 실제높이 = document.querySelector('.lorem').scrollHeight;
+            let 높이 = document.querySelector('.lorem').clientHeight;
+            console.log(스크롤양, 실제높이, 높이);
+            if(스크롤양+100 == 216) {
+                alert('약관을 다 읽으셨습니다.');
+            };
+        });
+    </script>
+
+    <div style="height: 1000px"></div>
 
     <div class="alert alert-danger">
        <span class="alert-text">5</span>초 이내 구매 시, 사은품 증정 !
