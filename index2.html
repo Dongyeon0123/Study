@@ -60,6 +60,10 @@
         .navbar-brand {
             font-size: 30px;
         }
+        .top-line {
+            border-bottom: 1px solid #000;
+            width: 0%;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </head>
@@ -72,14 +76,29 @@
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
+      <div class="top-line">
+
+      </div>
     </nav>
 
     <script>
+        // 페이지 스크롤바 100 이상 내리면 폰트사이즈 변경
         $(window).on('scroll', function() {
-            let scroll_count = $(window).scrollTop();
-            if (scroll_count >= 15) {
+            if (window.scrollY >= 100) {
                 $('.navbar-brand').css({'font-size': '20px'});
-            };
+            }
+            else {
+                $('.navbar-brand').css({'font-size' : '30px'});
+            }
+        });
+
+        $(window).on('scroll', function() {
+            let scrollTop = $(window).scrollTop(); // 현재 스크롤된 위치
+            let docHeight = $(document).height(); // 전체 문서 높이
+            let winHeight = $(window).height(); // 현재 창의 높이
+            let scrollPercent = (scrollTop / (docHeight - winHeight)) * 100; // 스크롤 퍼센트 계산
+
+            $('.top-line').css({'width' : scrollPercent + '%'}); // 가로 길이를 %로 설정
         });
     </script>
 
