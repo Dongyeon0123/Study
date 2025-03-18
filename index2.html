@@ -22,11 +22,13 @@
             cursor: pointer;
         }
         .black-bg {
+          top: 0;
+          left: 0;
           width : 100%;
           height : 100%;
           position : fixed;
           background : rgba(0,0,0,0.5);
-          z-index : 5;
+          z-index : 10;
           padding: 30px;
           opacity: 0;
           visibility: hidden;
@@ -137,8 +139,6 @@
             };
         });
     </script>
-
-    <div style="height: 1000px"></div>
 
     <div class="alert alert-danger">
        <span class="alert-text">5</span>초 이내 구매 시, 사은품 증정 !
@@ -289,7 +289,7 @@
             $('.hello').slideUp();
         })
 
-        $('#open').on('click', function() {
+        $('#login').on('click', function() {
             $('.black-bg').css({
                 'opacity': '1',
                 'transition': 'all 1s',
@@ -303,6 +303,21 @@
                 'transition': 'all 1s',
                 'visibility': 'hidden'
             });
+        })
+
+        $('.black-bg').on('click', function(e) {
+            // e.target(); -- 유저가 실제로 누른거
+            // e.currentTarget(); -- 이벤트 리스너 달린 곳 / 또는 this
+            // e.preventDefault(); -- 이벤트 기본 동작 막아줌
+            // e.stopPropagation(); -- 상위요소 버블링 중단
+
+            if($(e.target).is($('.black-bg'))) {
+                $('.black-bg').css({
+                'opacity' : '0',
+                'transition': 'all 1s',
+                'visibility': 'hidden'
+               });
+            }
         })
 
 
