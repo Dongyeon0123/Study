@@ -47,6 +47,54 @@
   </head>
 
   <body>
+
+    <div class="container mt-3">
+       <div class="card p-3">
+           <span class="name">상품명</span>
+           <span class="price">가격</span>
+       </div>
+    </div>
+
+    <script>
+
+        // Array형
+        let car = ['소나타', 50000, 'white'];
+        console.log(car[1]);
+        car[0] = '아반떼';
+
+        // object형 & name이랑  price는 key임 그랜져, 60000은 value
+        // == key : value형
+        let car2 = {name : '그렌져', price : [60000, 5000, 4000]}
+        console.log(car2['name']);
+        console.log(car2.price);
+        car2.price[0] = 30000;
+
+        // 위 코드는 클라이언트 렌더링을 하는 중 (서버가 편함)
+        // 데이터바인딩 - 데이터들을 html에 꽂아넣는 것
+
+        // 서버사이드 렌더링도 존재 (서버가 불편함 - 서버가 html을 다 만들어야함)
+
+        // 상품의 데이터가 많아지면 object 형이 좋은듯
+        // 이유는 순서보다 이름을 외우는것이 쉽기 때문
+
+        // 또한 array는 자료의 순서가 존재함. object는 없음
+        // []는 무조건 Array자료형
+
+
+        // 이름과 가격을 뽑아서 html애다가 넣기.
+        $('.name').html(car2.name);
+        $('.price').html(car2.price[0]);
+    </script>
+
+
+
+
+
+
+
+
+
+
     <div class="container mt-5">
       <ul class="list">
         <li class="tab-button">Products</li>
