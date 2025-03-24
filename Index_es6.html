@@ -102,7 +102,7 @@
         // Arrow function 장점
         // 1. 입출력 기계 만들 때 보기 쉬움
         // 2. 파라미터가 하나밖애 없을 때 소괄호 생략 가능 ex) let 함수 = a => {}
-        // 3. 코드가 한줄이면, 중괄호도 생략 가능 ex) let gㅏㅁ수 = a => a + 10;
+        // 3. 코드가 한줄이면, 중괄호도 생략 가능 ex) let 함수 = a => a + 10;
 
         // Arrow function 예시
         [1,2,3,4].forEach(a => console.log(a) );
@@ -120,6 +120,29 @@
         }
 
         오브젝트3.함수();
+
+        // this & arrow function 관련 문제
+
+        let 사람 = {
+            name: '손흥민',
+            sayHi() {
+                console.log(`안녕 나는 ${this.name}`);
+            }
+        }
+
+        사람.sayHi(); // 안녕 나는 손흥민
+
+        let 자료 = {
+            data: [1,2,3,4,5]
+        }
+
+        function 전부더하기() {
+            let sum = 0;
+            자료.data.forEach(num => sum += num);
+            console.log(sum);
+        }
+
+        전부더하기();
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
